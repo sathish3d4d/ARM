@@ -78,6 +78,7 @@ First, we will look at the parameters.
                                                         
 ===============================================================================================================================
 
+
 "parameters": {
 
     "storageAccountType": {
@@ -118,6 +119,7 @@ First, we will look at the parameters.
   },
   ============================================================================================================================
   ===============================================================================================================================
+  
 This section enables you to set storageAccountType and location when performing a deployment. For each option, we state:
 
 type - e.g. string.
@@ -125,11 +127,15 @@ Metadata : description - additional useful information that to help explain in w
 defaultValue - if this option is present, and no parameter is provided, we can create a value either statically by typing what the value should be, or in these examples, use functions to generate the value. We will cover functions in another lesson, but in this template, we are defaulting to the location of the resource group it is being created in. If we don't set defaultValue option it has the effect of making the parameter mandatory.
 allowedValues - allows us to set a list of values a user must choose from. When rendered into a form, this becomes a dropdown options list.
 Next, we have the variables section. Here, we are setting an account name.
+
+
 ====================================================================================================================================
                                                     variables
                                                     
                                                     
 =====================================================================================================================================
+
+
 "variables": {
 
     "storageAccountName": "[concat('store', uniquestring(resourceGroup().id))]"
@@ -164,13 +170,18 @@ Next, we have the resource section where we define the component itself.
     }
     
   ],
+  
+  
 =============================================================================================================================================
 ==============================================================================================================================================
+
+
 The type is the service, in this case, a storage account. The name, location, and sku are all taken from either the variables or parameters sections.
 
 The kind is an option that must be set when creating storage accounts. This could have been a parameter, but here we have chosen to statically set it as a StorageV2.
 
 Finally, we set output to return the generated storage account name. This could then be used in a pipeline or script to feed into another template.
+
 
 ===================================================================================================================================================
 
@@ -179,6 +190,8 @@ Finally, we set output to return the generated storage account name. This could 
                                                                     
                                                                     
 ===================================================================================================================================================
+
+
 "outputs": {
 
     "storageAccountName": {
