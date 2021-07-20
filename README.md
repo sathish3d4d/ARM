@@ -78,23 +78,39 @@ First, we will look at the parameters.
 ===============================================================================================================================
 
 "parameters": {
+
     "storageAccountType": {
+    
       "type": "string",
+      
       "defaultValue": "Standard_LRS",
+      
       "allowedValues": [
+      
         "Standard_LRS",
+        
         "Standard_GRS",
+        
         "Standard_ZRS",
+        
         "Premium_LRS"
+        
       ],
+      
       "metadata": {
+      
         "description": "Storage Account type"
       }
     },
+    
     "location": {
+    
       "type": "string",
+      
       "defaultValue": "[resourceGroup().location]",
+      
       "metadata": {
+      
         "description": "Location for all resources."
       }
     }
