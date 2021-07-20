@@ -75,6 +75,7 @@ We shall look through the different sections in turn.
 First, we will look at the parameters.
 ===============================================================================================================================
                                                         Parameters
+                                                        
 ===============================================================================================================================
 
 "parameters": {
@@ -126,6 +127,8 @@ allowedValues - allows us to set a list of values a user must choose from. When 
 Next, we have the variables section. Here, we are setting an account name.
 ====================================================================================================================================
                                                     variables
+                                                    
+                                                    
 =====================================================================================================================================
 "variables": {
 
@@ -170,7 +173,11 @@ The kind is an option that must be set when creating storage accounts. This coul
 Finally, we set output to return the generated storage account name. This could then be used in a pipeline or script to feed into another template.
 
 ===================================================================================================================================================
+
+
                                                                     out puts
+                                                                    
+                                                                    
 ===================================================================================================================================================
 "outputs": {
 
